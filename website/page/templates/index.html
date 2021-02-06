@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{%static 'page/style.css' %}">
     <title>website</title>
 </head>
 
@@ -24,10 +24,10 @@
     <div class="container">
         <div class="banner">
             <div class="logo">
-                <a href="index.html"><img src="{%staic 'page/images/mylogo.png' %}"></a>
+                <a href="{% url 'index' %}"><img src="{%static 'page/images/mylogo.png' %}"></a>
             </div>
             <div class="btn-wrapper">
-                <button class="banner-btn">Explore More</button>
+               <a href="{% url 'abstract' %}"> <button class="banner-btn">Explore More</button></a>
             </div>
         </div>
 
@@ -41,10 +41,10 @@
             <nav class="top-nav">
                 <ul class="nav-list">
                     <li>
-                        <a href="index.html" class="nav-link" data-text="Home">Home</a>
+                        <a href="{% url 'index' %}" class="nav-link" data-text="Home">Home</a>
                     </li>
                     <li>
-                        <a href="abstract.html" class="nav-link" data-text="Projects">Abstarct</a>
+                        <a href="{% url 'abstract' %}" class="nav-link" data-text="Projects">Abstarct</a>
                     </li>
                     
                 </ul>
@@ -77,7 +77,7 @@
 
 
 
-    <script src="app.js"></script>
+    <script src="{%static 'page/app.js' %}"></script>
 </body>
 
 </html>
